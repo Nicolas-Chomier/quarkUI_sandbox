@@ -1,0 +1,288 @@
+:root {
+	/* Button */
+	--button-radius-xxxs: 4px;
+	--button-radius-xxs: 6px;
+	--button-radius-xs: 8px;
+	--button-radius-s: 10px;
+	--button-radius-m: 12px;
+	--button-radius-l: 14px;
+	--button-radius-xl: 16px;
+	--button-radius-xxl: 18px;
+	--button-radius-xxxl: 20px;
+	--button-radius-full: 9999px;
+
+	--button-text-color-theme: #fafafa;
+	--button-text-color-accent: #fafafa;
+	--button-text-color-simple: #fafafa;
+	--button-text-color-outline: #fafafa;
+	--button-text-color-fade: #181818;
+	--button-text-color-infos: #181818;
+	--button-text-color-success: #fafafa;
+	--button-text-color-warning: #181818;
+	--button-text-color-danger: #fafafa;
+	--button-text-color-disabled: #bebfc5;
+
+	--button-background-color-theme: #7148fc;
+	--button-background-color-accent: #d3fc48;
+	--button-background-color-simple: #181818;
+	--button-background-color-fade: #f2f2f5;
+	--button-background-color-infos: #87aaeb;
+	--button-background-color-success: #3e9b4f;
+	--button-background-color-warning: #ffd000;
+	--button-background-color-danger: #e5484d;
+	--button-background-color-disabled: #e5e4e2;
+
+	--button-border-color-normal: #0000001f;
+	--button-border-color-focus: #ff0000;
+
+	/* IconButton */
+	--iconButton-radius-xxxs: 4px;
+	--iconButton-radius-xxs: 6px;
+	--iconButton-radius-xs: 8px;
+	--iconButton-radius-s: 10px;
+	--iconButton-radius-m: 12px;
+	--iconButton-radius-l: 14px;
+	--iconButton-radius-xl: 16px;
+	--iconButton-radius-xxl: 18px;
+	--iconButton-radius-xxxl: 20px;
+	--iconButton-radius-full: 9999px;
+
+	--iconButton-text-color-theme: #fafafa;
+	--iconButton-text-color-accent: #fafafa;
+	--iconButton-text-color-simple: #fafafa;
+	--iconButton-text-color-outline: #fafafa;
+	--iconButton-text-color-fade: #fafafa;
+	--iconButton-text-color-fade: #181818;
+	--iconButton-text-color-infos: #181818;
+	--iconButton-text-color-success: #fafafa;
+	--iconButton-text-color-warning: #181818;
+	--iconButton-text-color-danger: #fafafa;
+	--iconButton-text-color-disabled: #bebfc5;
+
+	--iconButton-background-color-theme: #7148fc;
+	--iconButton-background-color-accent: #d3fc48;
+	--iconButton-background-color-simple: #181818;
+	--iconButton-background-color-fade: #f2f2f5;
+	--iconButton-background-color-infos: #87aaeb;
+	--iconButton-background-color-success: #3e9b4f;
+	--iconButton-background-color-warning: #ffd000;
+	--iconButton-background-color-danger: #e5484d;
+	--iconButton-background-color-disabled: #e5e4e2;
+
+	--iconButton-border-color-normal: #0000001f;
+	--iconButton-border-color-focus: #ff0000;
+
+	/* Input */
+	--input-radius-xxxs: 4px;
+	--input-radius-xxs: 6px;
+	--input-radius-xs: 8px;
+	--input-radius-s: 10px;
+	--input-radius-m: 12px;
+	--input-radius-l: 14px;
+	--input-radius-xl: 16px;
+	--input-radius-xxl: 18px;
+	--input-radius-xxxl: 20px;
+	--input-radius-full: 9999px;
+
+	--input-text-color-normal: #fafafa;
+	--input-text-color-placeholder: #919191;
+	--input-text-color-disabled: #bebfc5;
+
+	--input-background-color-focus: #e6e6e6;
+	--input-background-color-disabled: #e5e4e2;
+
+	--input-border-color-normal: #0000001f;
+	--input-border-color-focus: #a8a8a8;
+
+	/* Label */
+	--label-text-color-normal: #181818;
+
+	/* Spinner */
+	--spinner-background-color-theme: #7148fc;
+	--spinner-background-color-accent: #d3fc48;
+	--spinner-background-color-basic: #fafafa;
+
+	/* Flex */
+	--flex-background-color-standard: #181818;
+
+	--flex-radius-xxxs: 4px;
+	--flex-radius-xxs: 6px;
+	--flex-radius-xs: 8px;
+	--flex-radius-s: 10px;
+	--flex-radius-m: 12px;
+	--flex-radius-l: 14px;
+	--flex-radius-xl: 16px;
+	--flex-radius-xxl: 18px;
+	--flex-radius-xxxl: 20px;
+	--flex-radius-full: 9999px;
+
+	/* Dialog */
+	--dialog-background-color-dialog: #111111de;
+	--dialog-background-color-backdrop: #0000002f;
+
+	/* Typography */
+	--typography-text-color-theme: #57fc48;
+	--typography-text-color-accent: #d3fc48;
+	--typography-text-color-infos: #87aaeb;
+	--typography-text-color-success: #3e9b4f;
+	--typography-text-color-warning: #ffd000;
+	--typography-text-color-danger: #e5484d;
+
+	/* Checkbox */
+	--checkbox-background-color-outline: #0000001a;
+
+	--checkbox-radius-s: 3px;
+	--checkbox-radius-m: 5px;
+	--checkbox-radius-l: 7px;
+	--checkbox-radius-full: 9999px;
+
+	--checkbox-children-color-solid-theme: #fafafa;
+	--checkbox-children-color-solid-accent: #fafafa;
+	--checkbox-children-color-solid-standard: #fafafa;
+	--checkbox-children-color-solid-fade: #181818;
+
+	--checkbox-color-theme: #7148fc;
+	--checkbox-color-accent: #fc48e4;
+	--checkbox-color-standard: #181818;
+	--checkbox-color-fade: #00000052;
+
+	--checkbox-color-disabled: #4b4b4b6b;
+
+	--checkbox-border-color-focus: #ff0000;
+	--checkbox-border-color-hover: #ff0000;
+
+	/* TextArea */
+	--textarea-background-color-standard: #0000001a;
+	--textarea-background-color-disabled: #505050d3;
+
+	--textarea-radius-xxxs: 4px;
+	--textarea-radius-xxs: 6px;
+	--textarea-radius-xs: 8px;
+	--textarea-radius-s: 10px;
+	--textarea-radius-m: 12px;
+	--textarea-radius-l: 14px;
+	--textarea-radius-xl: 16px;
+	--textarea-radius-xxl: 18px;
+	--textarea-radius-xxxl: 20px;
+	--textarea-radius-full: 9999px;
+
+	--textarea-border-color-standard: #0000001f;
+	--textarea-border-color-focus: #ff0000;
+
+	--textarea-text-color-placeholder: #919191;
+
+	/* Badge */
+	--badge-color-theme: #6319ec;
+	--badge-color-accent: #2fccf3;
+	--badge-color-info: #2e21e9;
+	--badge-color-success: #46f323;
+	--badge-color-warning: #f1ee16;
+	--badge-color-danger: #f11e1e;
+
+	--badge-background-color-standard: #181818;
+	--badge-background-color-theme: #6319ec;
+	--badge-background-color-accent: #2fccf3;
+	--badge-background-color-info: #2e21e9;
+	--badge-background-color-success: #46f323;
+	--badge-background-color-warning: #f1ee16;
+	--badge-background-color-danger: #f11e1e;
+
+	--badge-fade-background-theme: rgba(99, 25, 236, 0.1);
+	--badge-fade-background-accent: rgba(47, 204, 243, 0.1);
+	--badge-fade-background-info: rgba(46, 33, 233, 0.1);
+	--badge-fade-background-success: rgba(70, 243, 35, 0.1);
+	--badge-fade-background-warning: rgba(241, 238, 22, 0.1);
+	--badge-fade-background-danger: rgba(241, 30, 30, 0.1);
+
+	--badge-text-color-standard: white;
+	--badge-text-color-theme: white;
+	--badge-text-color-accent: white;
+	--badge-text-color-info: white;
+	--badge-text-color-success: white;
+	--badge-text-color-warning: black;
+	--badge-text-color-danger: white;
+
+	--badge-radius-xxs: 2px;
+	--badge-radius-xs: 4px;
+	--badge-radius-s: 6px;
+	--badge-radius-m: 8px;
+	--badge-radius-l: 10px;
+	--badge-radius-xl: 12px;
+	--badge-radius-xxl: 14px;
+
+	/* Select */
+	--select-border-color-standard: #000000;
+	--select-border-color-active: #ff0000;
+
+	--select-field-and-panel-radius: 0.938rem;
+
+	--select-field-background-color-standard: red;
+	--select-field-background-color-hover: rgba(218, 53, 53, 0.644);
+
+	--select-panel-background-color-hover: green;
+	--select-panel-background-color: transparent;
+
+	--select-scrollbar-background-color-inner: rgb(22, 22, 22);
+	--select-scrollbar-background-color-outer: rgb(252, 2, 2);
+
+	--select-scrollbar-width: 1rem;
+
+	/* MultiSelect */
+	--multiSelect-border-color-standard: #000000;
+	--multiSelect-border-color-active: #ff0000;
+
+	--multiSelect-field-and-panel-radius: 0.938rem;
+
+	--multiSelect-field-background-color-standard: red;
+	--multiSelect-field-background-color-hover: rgba(218, 53, 53, 0.644);
+
+	--multiSelect-panel-background-color-hover: green;
+	--multiSelect-panel-background-color: transparent;
+
+	--multiSelect-scrollbar-background-color-inner: rgb(22, 22, 22);
+	--multiSelect-scrollbar-background-color-outer: rgb(252, 2, 2);
+
+	--multiSelect-scrollbar-width: 1rem;
+
+	/* Fallback */
+	--fallback-background-color: rgb(39, 39, 39);
+
+	--fallback-text-color: rgb(255, 255, 255);
+
+	--fallback-radius-xxxs: 4px;
+	--fallback-radius-xxs: 6px;
+	--fallback-radius-xs: 8px;
+	--fallback-radius-s: 10px;
+	--fallback-radius-m: 12px;
+	--fallback-radius-l: 14px;
+	--fallback-radius-xl: 16px;
+	--fallback-radius-xxl: 18px;
+	--fallback-radius-xxxl: 20px;
+	--fallback-radius-full: 9999px;
+
+	/* Table */
+	--table-padding: 0.75rem;
+
+	--table-background-color-standard: #19191c;
+	--table-header-background-color-standard: #262629;
+
+	--table-header-checkbox-background-color-standard: #3e3e45;
+	--table-header-checkbox-radius: 5px;
+
+	--table-text-color-standard: #e6e6e6;
+
+	--table-radius: 20px;
+	--table-header-radius: 12px;
+
+	--table-border-color-standard: #262629;
+
+	--table-row-background-color-selected: rgb(143, 47, 252);
+	--table-row-text-color-hover: hotpink;
+	--table-row-text-color-selected-hover: #e6e6e6;
+
+	--table-pagination-button-radius: 10px;
+	--table-pagination-button-background-color-standard: #3e3e45;
+	--table-pagination-button-text-color-standard: #e6e6e6;
+
+	--table-X-icon-color: rgb(224, 51, 51);
+}

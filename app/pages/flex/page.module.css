@@ -1,0 +1,56 @@
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 2rem;
+	font-family: Arial, sans-serif;
+}
+
+.pageTitle {
+	text-align: center;
+	margin-bottom: 2rem;
+	color: #333;
+}
+
+.section {
+	margin-bottom: 2rem;
+}
+
+.section h2 {
+	margin-bottom: 1rem;
+	color: #444;
+	border-bottom: 2px solid #eee;
+	padding-bottom: 0.5rem;
+}
+
+.flexDemo {
+	max-width: 500px;
+	margin: 0 auto;
+}
+
+.label {
+	display: block;
+	margin-bottom: 0.5rem;
+	font-weight: bold;
+	color: #555;
+}
+
+.flexContainer {
+	background-color: #f5f5f5;
+	border-radius: 8px;
+	padding: 1rem;
+}
+
+.input {
+	flex-grow: 1;
+	margin-right: 0.5rem;
+}
+
+@media (max-width: 768px) {
+	.container {
+		padding: 1rem;
+	}
+
+	.flexDemo {
+		max-width: 100%;
+	}
+}

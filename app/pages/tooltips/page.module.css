@@ -1,0 +1,59 @@
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 2rem;
+	font-family: Arial, sans-serif;
+}
+
+.pageTitle {
+	text-align: center;
+	margin-bottom: 2rem;
+	color: #333;
+}
+
+.section {
+	margin-bottom: 2rem;
+}
+
+.section h2 {
+	margin-bottom: 1rem;
+	color: #444;
+	border-bottom: 2px solid #eee;
+	padding-bottom: 0.5rem;
+}
+
+.tooltipGroup {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2rem;
+	justify-content: center;
+}
+
+.tooltipWrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.tooltipTrigger {
+	width: 80px;
+	height: 80px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	font-weight: bold;
+	cursor: pointer;
+	border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+	.container {
+		padding: 1rem;
+	}
+
+	.tooltipGroup {
+		flex-direction: column;
+		align-items: center;
+	}
+}
