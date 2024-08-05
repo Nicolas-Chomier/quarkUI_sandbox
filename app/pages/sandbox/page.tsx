@@ -1,8 +1,9 @@
 // pages/table-test.tsx
 'use client';
 import React, { useState } from 'react';
-import { Table } from 'quark';
+
 import styles from './page.module.css';
+/* import { TestNewTable } from '@/app/componentSandbox/TestNewTable'; */
 
 const testData = [
 	{ id: 1, name: 'Alice Johnson', age: 28, department: 'Marketing' },
@@ -17,31 +18,31 @@ const testData = [
 	{ id: 10, name: 'Jack Thomas', age: 41, department: 'IT' },
 ];
 
-export default function TableTest() {
+export default function SandBoxPage() {
 	const [selectedRows, setSelectedRows] = useState([]);
 
-	const handleSelectedRows = (selected: any) => {
+	const handleTest = (selected: any) => {
 		setSelectedRows(selected);
 		console.log('Selected rows:', selected);
 	};
 
 	return (
 		<div className={styles.container}>
-			<h1 className={styles.pageTitle}>Table Test Page</h1>
+			<h1 className={styles.pageTitle}>SAND BOX PAGE</h1>
 
 			<section className={styles.section}>
-				<h2>Basic Table</h2>
+				<h2>...</h2>
 				<div className={styles.tableWrapper}>
-					<Table
+					{/* <TestNewTable
 						size='m'
 						data={testData}
-						onRowsSelect={handleSelectedRows}
+						onRowsSelect={handleTest}
 						allowSelection={'multiple'}
-					/>
+					/> */}
 				</div>
 			</section>
 
-			<section className={styles.section}>
+			{/* <section className={styles.section}>
 				<h2>Selected Rows</h2>
 				<pre className={styles.selectedRowsDisplay}>
 					{JSON.stringify(selectedRows, null, 2)}
@@ -57,7 +58,7 @@ export default function TableTest() {
 					table s size. Selected rows are handled by the onRowsSelect
 					callback.
 				</p>
-			</section>
+			</section> */}
 		</div>
 	);
 }

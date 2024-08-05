@@ -52,6 +52,11 @@ export default function Home() {
 					</Link>
 				</div>
 			</div>
+			<div className={styles.bot}>
+				<Link href='/pages/sandbox' className={styles.sandboxLink}>
+					SandBox
+				</Link>
+			</div>
 		</div>
 	);
 }

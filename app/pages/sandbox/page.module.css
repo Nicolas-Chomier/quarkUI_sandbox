@@ -1,0 +1,42 @@
+/* PAGE */
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 2rem;
+	font-family: Arial, sans-serif;
+}
+
+.pageTitle {
+	text-align: center;
+	margin-bottom: 2rem;
+	color: #333;
+}
+
+.section {
+	margin-bottom: 2rem;
+}
+
+.section h2 {
+	margin-bottom: 1rem;
+	color: #444;
+	border-bottom: 2px solid #eee;
+	padding-bottom: 0.5rem;
+}
+
+.tableWrapper {
+	overflow-x: auto;
+	margin-bottom: 1rem;
+}
+
+.selectedRowsDisplay {
+	background-color: #f5f5f5;
+	padding: 1rem;
+	border-radius: 4px;
+	overflow-x: auto;
+}
+
+@media (max-width: 768px) {
+	.container {
+		padding: 1rem;
+	}
+}

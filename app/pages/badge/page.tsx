@@ -16,7 +16,7 @@ export default function BadgeTest() {
 						color='theme'
 						size='small'
 						variant='solid'
-						borderRadius='md'
+						borderRadius='m'
 					>
 						theme
 					</Badge>
