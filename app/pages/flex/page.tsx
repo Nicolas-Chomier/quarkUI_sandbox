@@ -11,7 +11,7 @@ export default function FlexTest() {
 			<h1 className={styles.pageTitle}>Flex Test Page</h1>
 
 			<section className={styles.section}>
-				<h2>Flex Layout with Input and IconButton</h2>
+				<h2>Flex Layout with Input and IconButton style 1</h2>
 				<div className={styles.flexDemo}>
 					<Label
 						htmlFor='Test2'
@@ -54,7 +54,41 @@ export default function FlexTest() {
 					</Label>
 				</div>
 			</section>
-
+			<section className={styles.section}>
+				<h2>Flex Layout with Input and IconButton style 2</h2>
+				<div className={styles.flexDemo}>
+					<Flex
+						direction='row'
+						justify='between'
+						borderRadius='l'
+						align='end'
+						gap='3xs'
+						pb='3'
+						pt='3'
+						pr='3'
+						pl='3'
+					>
+						<Label
+							htmlFor='Test2'
+							text='Actions'
+							textAlign='left'
+							fontWeight='medium'
+							offsetLeft='10'
+						>
+							<Input
+								type='text'
+								name='Test2'
+								border
+								placeholder='Votre email...'
+								borderRadius='m'
+							/>
+						</Label>
+						<IconButton variant='theme' size='m' borderRadius='m'>
+							<Bird />
+						</IconButton>
+					</Flex>
+				</div>
+			</section>
 			<section className={styles.section}>
 				<h2>Description</h2>
 				<p>

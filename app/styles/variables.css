@@ -14,7 +14,7 @@
 	--button-text-color-theme: #fafafa;
 	--button-text-color-accent: #fafafa;
 	--button-text-color-simple: #fafafa;
-	--button-text-color-outline: #fafafa;
+	--button-text-color-outline: #000000;
 	--button-text-color-fade: #181818;
 	--button-text-color-infos: #181818;
 	--button-text-color-success: #fafafa;
@@ -22,8 +22,8 @@
 	--button-text-color-danger: #fafafa;
 	--button-text-color-disabled: #bebfc5;
 
-	--button-background-color-theme: #7148fc;
-	--button-background-color-accent: #d3fc48;
+	--button-background-color-theme: #fc4848;
+	--button-background-color-accent: #4890fc;
 	--button-background-color-simple: #181818;
 	--button-background-color-fade: #f2f2f5;
 	--button-background-color-infos: #87aaeb;
@@ -84,15 +84,15 @@
 	--input-radius-xxxl: 20px;
 	--input-radius-full: 9999px;
 
-	--input-text-color-normal: #fafafa;
-	--input-text-color-placeholder: #919191;
+	--input-text-color-normal: #000000;
+	--input-text-color-placeholder: #4d4d4dee;
 	--input-text-color-disabled: #bebfc5;
 
-	--input-background-color-focus: #e6e6e6;
+	--input-background-color-focus: #00000010;
 	--input-background-color-disabled: #e5e4e2;
 
 	--input-border-color-normal: #0000001f;
-	--input-border-color-focus: #a8a8a8;
+	--input-border-color-focus: #a8a8a87a;
 
 	/* Label */
 	--label-text-color-normal: #181818;

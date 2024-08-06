@@ -25,7 +25,7 @@ export default function ButtonTest() {
 						variant='theme'
 						width='m'
 						borderRadius='m'
-						text='COMMUNICATE'
+						text='commu'
 					>
 						<Bird />
 					</Button>
