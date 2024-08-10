@@ -1,0 +1,83 @@
+.container {
+	width: fit-content;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	position: relative;
+}
+
+.field {
+	display: flex;
+	align-items: center;
+	gap: 0.125rem;
+	padding: 0.1875rem;
+	border-radius: var(--select-field-and-panel-radius);
+	box-shadow: inset 0 0 0 1px var(--select-border-color-standard);
+	background-color: var(--select-field-background-color-standard);
+	transition: background-color 0.2s ease;
+}
+.field:hover {
+	background-color: var(--select-field-background-color-hover);
+}
+
+.panel {
+	width: 15.5rem;
+	max-width: 15.5rem;
+	height: 0;
+	position: absolute;
+	top: var(--select-panel-absolute-top-position);
+	z-index: 99999;
+	margin-top: 0.125rem;
+	overflow-y: auto;
+	overflow-x: hidden;
+	background-color: var(--select-panel-background-color);
+	border-radius: var(--select-field-and-panel-radius);
+	transition: height 0.3s ease, box-shadow 0.3s ease;
+}
+.panelOpen {
+	height: auto;
+	height: calc-size(auto);
+	max-height: 14.875rem;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	box-shadow: inset 0 0 0 1px var(--select-panel-open-border-color);
+}
+
+.customButton {
+	width: calc(15.5rem - 2px);
+	max-width: calc(15.5rem - 2px);
+	height: 2.375rem;
+	padding: 0.25rem;
+	border: none;
+	outline: none;
+	background-color: transparent;
+	color: var(--select-button-panel-text-color-standard);
+	cursor: pointer;
+	font: inherit;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	font-size: inherit;
+	font-weight: inherit;
+	font-style: inherit;
+	font-family: inherit;
+}
+.customButton:hover {
+	background-color: var(--select-panel-background-color-hover);
+	color: var(--select-button-panel-text-color-hover);
+}
+.panel::-webkit-scrollbar {
+	width: 0;
+}
+.panel[data-scrollbar='true']::-webkit-scrollbar {
+	width: var(--select-scrollbar-width);
+}
+.panel[data-scrollbar='true']::-webkit-scrollbar-track {
+	background: var(--select-scrollbar-background-color-outer);
+}
+.panel[data-scrollbar='true']::-webkit-scrollbar-thumb {
+	background: var(--select-scrollbar-background-color-inner);
+	border-radius: 99px;
+}

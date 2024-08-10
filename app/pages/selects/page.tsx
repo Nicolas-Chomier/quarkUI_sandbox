@@ -1,8 +1,10 @@
 // pages/multi-select-test.tsx
 'use client';
 import React from 'react';
-import { MultiSelect, Select } from 'quark';
+
+import { TSelect } from '@/app/componentSandbox/TSelect';
 import styles from './page.module.css';
+import { MultiSelect } from '@/app/componentSandbox/TMultiSelect';
 
 const dataSelect = [
 	'test1',
@@ -40,7 +42,6 @@ const SelectTestPage = () => {
 						label='MultiSelect Demo'
 						name='multiselect'
 						variant='simple'
-						scrollbar
 					/>
 				</div>
 			</section>
@@ -48,14 +49,13 @@ const SelectTestPage = () => {
 			<section className={styles.section}>
 				<h2>Select</h2>
 				<div className={styles.selectDemo}>
-					<Select
+					<TSelect
 						onFieldChange={handleSelect}
 						data={dataSelect}
 						placeholder='Select an item...'
 						label='Select Demo'
 						name='select'
 						variant='simple'
-						scrollbar
 					/>
 				</div>
 			</section>

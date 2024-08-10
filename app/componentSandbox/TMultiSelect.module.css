@@ -1,0 +1,101 @@
+.container {
+	width: fit-content;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	position: relative;
+}
+
+.field {
+	display: flex;
+	align-items: center;
+	gap: 0.125rem;
+	padding: 0.1875rem;
+	border-radius: var(--multiSelect-field-and-panel-radius);
+	box-shadow: inset 0 0 0 1px var(--multiSelect-border-color-standard);
+	background-color: var(--multiSelect-field-background-color-standard);
+	transition: background-color 0.2s ease;
+}
+.field:hover {
+	background-color: var(--multiSelect-field-background-color-hover);
+}
+
+.panel {
+	position: absolute;
+	top: var(--multiSelect-panel-absolute-top-position);
+	z-index: 99999;
+}
+
+.scrollablePanelItemList {
+	width: 15.5rem;
+	max-width: 15.5rem;
+	max-height: fit-content;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+.itemPanel {
+	width: 15.5rem;
+	max-width: 15.5rem;
+	height: 0;
+	overflow-y: auto;
+	overflow-x: hidden;
+	transition: height 0.3s ease, box-shadow 0.3s ease;
+	border-radius: var(--multiSelect-field-and-panel-radius);
+	box-shadow: inset 0 0 0 1px var(--multiSelect-border-color-active);
+	background-color: var(--multiSelect-panel-background-color);
+}
+
+.itemPanelOpen {
+	height: auto;
+	height: calc-size(auto);
+	max-height: 14.875rem;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	box-shadow: inset 0 0 0 1px var(--multiSelect-panel-open-border-color);
+}
+
+.customButton {
+	width: calc(15.5rem - 2px);
+	max-width: calc(15.5rem - 2px);
+	height: 2.375rem;
+	padding: 0.25rem 0.7rem;
+	border: none;
+	outline: none;
+	background-color: transparent;
+	color: var(--multiSelect-button-panel-text-color-standard);
+	cursor: pointer;
+	font: inherit;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	font-size: inherit;
+	font-weight: inherit;
+	font-style: inherit;
+	font-family: inherit;
+}
+
+.customButton:hover {
+	background-color: var(--multiSelect-panel-background-color-hover);
+	color: var(--multiSelect-button-panel-text-color-hover);
+}
+
+.scrollablePanelItemList::-webkit-scrollbar {
+	display: none;
+}
+
+.itemPanel::-webkit-scrollbar {
+	width: 0;
+}
+.itemPanel[data-scrollbar='true']::-webkit-scrollbar {
+	width: var(--multiSelect-scrollbar-width);
+}
+.itemPanel[data-scrollbar='true']::-webkit-scrollbar-track {
+	background: var(--multiSelect-scrollbar-background-color-outer);
+}
+.itemPanel[data-scrollbar='true']::-webkit-scrollbar-thumb {
+	background: var(--multiSelect-scrollbar-background-color-inner);
+	border-radius: 99px;
+}

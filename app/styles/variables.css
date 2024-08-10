@@ -85,14 +85,14 @@
 	--input-radius-full: 9999px;
 
 	--input-text-color-normal: #000000;
-	--input-text-color-placeholder: #4d4d4dee;
+	--input-text-color-placeholder: #3f3f3fee;
 	--input-text-color-disabled: #bebfc5;
 
-	--input-background-color-focus: #00000010;
+	--input-background-color-focus: #0000002d;
 	--input-background-color-disabled: #e5e4e2;
 
 	--input-border-color-normal: #0000001f;
-	--input-border-color-focus: #a8a8a87a;
+	--input-border-color-focus: transparent;
 
 	/* Label */
 	--label-text-color-normal: #181818;
@@ -117,8 +117,16 @@
 	--flex-radius-full: 9999px;
 
 	/* Dialog */
-	--dialog-background-color-dialog: #111111de;
-	--dialog-background-color-backdrop: #0000002f;
+	--dialog-background-color-standard: #f8f8f8de;
+	--dialog-background-color-backdrop: #ffffff00;
+
+	--dialog-padding-s: 1rem;
+	--dialog-padding-m: 2rem;
+	--dialog-padding-l: 3rem;
+
+	--dialog-box-shadow-color: #0000002d;
+
+	--dialog-border-radius: 22px;
 
 	/* Typography */
 	--typography-text-color-theme: #57fc48;
@@ -211,38 +219,48 @@
 	--badge-radius-xxl: 14px;
 
 	/* Select */
-	--select-border-color-standard: #000000;
-	--select-border-color-active: #ff0000;
+	--select-border-color-standard: #0000003b;
+	--select-panel-open-border-color: #0000003b;
 
 	--select-field-and-panel-radius: 0.938rem;
 
-	--select-field-background-color-standard: red;
-	--select-field-background-color-hover: rgba(218, 53, 53, 0.644);
+	--select-field-background-color-standard: rgb(255, 255, 255);
+	--select-field-background-color-hover: transparent;
 
-	--select-panel-background-color-hover: green;
-	--select-panel-background-color: transparent;
+	--select-panel-background-color-hover: rgb(61, 61, 61);
+	--select-panel-background-color: rgb(243, 243, 243);
 
-	--select-scrollbar-background-color-inner: rgb(22, 22, 22);
-	--select-scrollbar-background-color-outer: rgb(252, 2, 2);
+	--select-button-panel-text-color-standard: rgb(8, 8, 8);
+	--select-button-panel-text-color-hover: rgb(216, 196, 240);
+
+	--select-scrollbar-background-color-inner: rgb(182, 182, 182);
+	--select-scrollbar-background-color-outer: rgb(49, 49, 49);
 
 	--select-scrollbar-width: 1rem;
 
+	--select-panel-absolute-top-position: 100%;
+
 	/* MultiSelect */
-	--multiSelect-border-color-standard: #000000;
-	--multiSelect-border-color-active: #ff0000;
+	--multiSelect-border-color-standard: #0000003b;
+	--multiSelect-panel-open-border-color: #0000003b;
 
 	--multiSelect-field-and-panel-radius: 0.938rem;
 
-	--multiSelect-field-background-color-standard: red;
-	--multiSelect-field-background-color-hover: rgba(218, 53, 53, 0.644);
+	--multiSelect-field-background-color-standard: rgb(255, 255, 255);
+	--multiSelect-field-background-color-hover: transparent;
 
-	--multiSelect-panel-background-color-hover: green;
-	--multiSelect-panel-background-color: transparent;
+	--multiSelect-panel-background-color-hover: rgb(61, 61, 61);
+	--multiSelect-panel-background-color: rgb(243, 243, 243);
 
-	--multiSelect-scrollbar-background-color-inner: rgb(22, 22, 22);
-	--multiSelect-scrollbar-background-color-outer: rgb(252, 2, 2);
+	--multiSelect-button-panel-text-color-standard: rgb(8, 8, 8);
+	--multiSelect-button-panel-text-color-hover: rgb(216, 196, 240);
+
+	--multiSelect-scrollbar-background-color-inner: rgb(182, 182, 182);
+	--multiSelect-scrollbar-background-color-outer: rgb(49, 49, 49);
 
 	--multiSelect-scrollbar-width: 1rem;
+
+	--multiSelect-panel-absolute-top-position: calc(100% + 2px);
 
 	/* Fallback */
 	--fallback-background-color: rgb(39, 39, 39);

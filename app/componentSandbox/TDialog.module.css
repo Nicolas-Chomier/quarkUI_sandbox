@@ -1,0 +1,53 @@
+.dialog {
+	display: none;
+	animation: fadeIn 0.9s ease-out;
+}
+
+.dialog[open] {
+	display: block;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 9999;
+	border-radius: var(--dialog-border-radius);
+}
+
+.dialog[open][data-background='true'] {
+	background-color: var(--dialog-background-color-standard);
+}
+.dialog[open][data-box-shadow='true'] {
+	box-shadow: 0 4px 6px var(--dialog-box-shadow-color);
+}
+.dialog[open][data-padding='s'] {
+	padding: var(--dialog-padding-s);
+}
+.dialog[open][data-padding='m'] {
+	padding: var(--dialog-padding-m);
+}
+.dialog[open][data-padding='l'] {
+	padding: var(--dialog-padding-l);
+}
+
+.dialog::backdrop {
+	min-width: 100vw;
+	max-width: 100vw;
+	min-height: 100vh;
+	max-height: 100vh;
+
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	backdrop-filter: blur(3px);
+	background-color: var(--dialog-background-color-backdrop);
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}

@@ -1,8 +1,9 @@
 // pages/dialog-test.tsx
 'use client';
 import React, { useState } from 'react';
-import { Button, Dialog, IconButton } from 'quark';
+import { Button, IconButton } from 'quark';
 import styles from './page.module.css';
+import { Dialog } from '@/app/componentSandbox/TDialog';
 
 export default function DialogTest() {
 	const [open, setOpen] = useState(false);
@@ -30,7 +31,14 @@ export default function DialogTest() {
 					>
 						Open Dialog
 					</IconButton>
-					<Dialog isOpen={open} id='test' className={styles.dialog}>
+					<Dialog
+						isOpen={open}
+						id='test'
+						className={styles.dialog}
+						padding='m'
+						background
+						shadow
+					>
 						<div className={styles.dialogContent}>
 							<h3>Dialog Title</h3>
 							<p>
