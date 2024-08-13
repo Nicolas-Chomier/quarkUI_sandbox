@@ -50,6 +50,9 @@ export default function Home() {
 					<Link href='/pages/fallback' className={styles.link}>
 						Fallback
 					</Link>
+					<Link href='/pages/alert' className={styles.link}>
+						Alert
+					</Link>
 				</div>
 			</div>
 		</div>
