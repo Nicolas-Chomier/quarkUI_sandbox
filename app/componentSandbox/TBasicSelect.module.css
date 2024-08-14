@@ -1,0 +1,153 @@
+.container {
+	/* Dimensions et rayons */
+	--basicSelect-field-and-panel-radius: 0.938rem;
+	--basicSelect-scrollbar-width: 6px;
+
+	/* Couleurs de fond */
+	--basicSelect-field-background-color-standard: #ffffff;
+	--basicSelect-field-background-color-hover: #f0f0f0;
+	--basicSelect-panel-background-color: #ffffff;
+	--basicSelect-panel-background-color-hover: #f0f0f0;
+
+	/* Couleurs de bordure */
+	--basicSelect-border-color-standard: #cccccc;
+	--basicSelect-panel-open-border-color: #999999;
+
+	/* Couleurs de texte */
+	--basicSelect-button-panel-text-color-standard: #333333;
+	--basicSelect-button-panel-text-color-hover: #000000;
+
+	/* Couleurs de la barre de défilement */
+	--basicSelect-scrollbar-background-color-outer: #f0f0f0;
+	--basicSelect-scrollbar-background-color-inner: #cccccc;
+
+	/* Couleur de focus */
+	--basicSelect-focus-color: rgba(0, 123, 255, 0.25);
+
+	/* Position du panel */
+	--basicSelect-panel-absolute-top-position: 100%;
+
+	/* Variables pour le thème */
+	--theme-bg-color: #f0f0f0;
+	--theme-bg-hover-color: #e0e0e0;
+	--theme-text-color: #333333;
+	--theme-border-color: #cccccc;
+
+	/* Variables pour l'accent */
+	--accent-bg-color: #e6f7ff;
+	--accent-bg-hover-color: #bae7ff;
+	--accent-text-color: #0066cc;
+	--accent-border-color: #91d5ff;
+
+	width: fit-content;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	position: relative;
+}
+
+.basicSelect {
+	display: flex;
+	align-items: center;
+	gap: 0.125rem;
+	padding: 0 0.75rem;
+	height: 2.875rem;
+	border-radius: var(--basicSelect-field-and-panel-radius);
+	box-shadow: inset 0 0 0 1px var(--basicSelect-border-color-standard);
+	background-color: var(--basicSelect-field-background-color-standard);
+	transition: background-color 0.2s ease;
+	appearance: none;
+	width: 12.5rem;
+
+	font: inherit;
+	padding-right: 1.5rem;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23333' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+	background-repeat: no-repeat;
+	background-position: right 0.5rem center;
+	background-size: 12px;
+}
+
+.basicSelect:hover {
+	background-color: var(--basicSelect-field-background-color-hover);
+}
+
+.basicSelect:focus {
+	outline: none;
+	box-shadow: 0 0 0 2px var(--basicSelect-focus-color);
+}
+
+.basicSelect:disabled {
+	opacity: 0.6;
+	cursor: not-allowed;
+}
+
+.basicSelect option {
+	background-color: var(--basicSelect-panel-background-color);
+	color: var(--basicSelect-button-panel-text-color-standard);
+}
+
+.basicSelect option:hover {
+	background-color: var(--basicSelect-panel-background-color-hover);
+	color: var(--basicSelect-button-panel-text-color-hover);
+}
+
+/* Variant styles */
+.basicSelect[data-variant='theme'] {
+	--basicSelect-border-color-standard: var(--theme-border-color);
+	--basicSelect-field-background-color-standard: var(--theme-bg-color);
+	--basicSelect-field-background-color-hover: var(--theme-bg-hover-color);
+	color: var(--theme-text-color);
+}
+
+.basicSelect[data-variant='accent'] {
+	--basicSelect-border-color-standard: var(--accent-border-color);
+	--basicSelect-field-background-color-standard: var(--accent-bg-color);
+	--basicSelect-field-background-color-hover: var(--accent-bg-hover-color);
+	color: var(--accent-text-color);
+}
+
+.basicSelect[data-variant='simple'] {
+	--basicSelect-border-color-standard: #cccccc;
+	--basicSelect-field-background-color-standard: #ffffff;
+	--basicSelect-field-background-color-hover: #f5f5f5;
+}
+
+.basicSelect[data-variant='outline'] {
+	--basicSelect-border-color-standard: #666666;
+	--basicSelect-field-background-color-standard: transparent;
+	--basicSelect-field-background-color-hover: rgba(0, 0, 0, 0.05);
+	box-shadow: inset 0 0 0 2px var(--basicSelect-border-color-standard);
+}
+
+.basicSelect[data-variant='fade'] {
+	--basicSelect-border-color-standard: rgba(0, 0, 0, 0.1);
+	--basicSelect-field-background-color-standard: rgba(0, 0, 0, 0.05);
+	--basicSelect-field-background-color-hover: rgba(0, 0, 0, 0.1);
+}
+
+.basicSelect[data-variant='ghost'] {
+	--basicSelect-border-color-standard: transparent;
+	--basicSelect-field-background-color-standard: transparent;
+	--basicSelect-field-background-color-hover: rgba(0, 0, 0, 0.05);
+	box-shadow: none;
+}
+
+/* Placeholder style */
+.basicSelect option[value=''] {
+	color: #999;
+}
+
+/* Scrollbar styles */
+.basicSelect::-webkit-scrollbar {
+	width: var(--basicSelect-scrollbar-width);
+}
+
+.basicSelect::-webkit-scrollbar-track {
+	background: var(--basicSelect-scrollbar-background-color-outer);
+}
+
+.basicSelect::-webkit-scrollbar-thumb {
+	background: var(--basicSelect-scrollbar-background-color-inner);
+	border-radius: 99px;
+}

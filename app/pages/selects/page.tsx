@@ -5,6 +5,9 @@ import React from 'react';
 import { TSelect } from '@/app/componentSandbox/TSelect';
 import styles from './page.module.css';
 import { MultiSelect } from '@/app/componentSandbox/TMultiSelect';
+import { TBasicSelect } from '@/app/componentSandbox/TBasicSelect';
+import { Flex } from 'quark';
+import { TFlags } from '@/app/componentSandbox/TFlags';
 
 const dataSelect = [
 	'test1',
@@ -19,12 +22,25 @@ const dataSelect = [
 	'lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
 ];
 
+const languages = [
+	'Français',
+	'English',
+	'Italian',
+	'Español',
+	'japan',
+	'korean',
+];
+
 const SelectTestPage = () => {
 	const handleMultiSelect = (value: any) => {
 		console.log('MultiSelect value:', value);
 	};
 
 	const handleSelect = (value: any) => {
+		console.log('Select value:', value);
+	};
+
+	const handleBasicSelect = (value: any) => {
 		console.log('Select value:', value);
 	};
 
@@ -61,6 +77,36 @@ const SelectTestPage = () => {
 			</section>
 
 			<section className={styles.section}>
+				<h2>Basical Select W.I.P</h2>
+				<div className={styles.selectDemo}>
+					<TBasicSelect
+						onChange={handleBasicSelect}
+						data={languages}
+						placeholder='Select one'
+						label='Select Demo'
+						name='select'
+						variant='theme'
+					/>
+				</div>
+			</section>
+
+			<section className={styles.section}>
+				<h2>Button languages</h2>
+				<div className={styles.selectDemo}>
+					<Flex direction='row'>
+						<TFlags
+							onClick={handleBasicSelect}
+							languages={languages}
+							size='m'
+							variant='fade'
+							borderRadius='m'
+						/>
+						Dessous
+					</Flex>
+				</div>
+			</section>
+
+			<section className={styles.section}>
 				<h2>Usage Instructions</h2>
 				<h3>MultiSelect</h3>
 				<p>
@@ -76,6 +122,8 @@ const SelectTestPage = () => {
 					in the input field. Use the search input to filter the
 					available options.
 				</p>
+				<h3>Basical Select</h3>
+				<p>Simple select with no search and option items. A finir !</p>
 			</section>
 		</div>
 	);

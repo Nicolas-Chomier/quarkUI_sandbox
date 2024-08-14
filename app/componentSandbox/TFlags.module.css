@@ -1,0 +1,219 @@
+.languageContainer {
+	--flags-radius-xxxs: 4px;
+	--flags-radius-xxs: 6px;
+	--flags-radius-xs: 8px;
+	--flags-radius-s: 10px;
+	--flags-radius-m: 12px;
+	--flags-radius-l: 14px;
+	--flags-radius-xl: 16px;
+	--flags-radius-xxl: 18px;
+	--flags-radius-xxxl: 20px;
+	--flags-radius-full: 9999px;
+
+	--flags-text-color-theme: #fafafa;
+	--flags-text-color-accent: #fafafa;
+	--flags-text-color-simple: #fafafa;
+	--flags-text-color-outline: #fafafa;
+	--flags-text-color-fade: #181818;
+	--flags-text-color-ghost: #181818;
+	--flags-text-color-info: #181818;
+	--flags-text-color-success: #fafafa;
+	--flags-text-color-warning: #181818;
+	--flags-text-color-danger: #fafafa;
+	--flags-text-color-disabled: #bebfc5;
+
+	--flags-background-color-theme: #7148fc;
+	--flags-background-color-accent: #d3fc48;
+	--flags-background-color-simple: #181818;
+	--flags-background-color-fade: #f2f2f5;
+	--flags-background-color-info: #87aaeb;
+	--flags-background-color-success: #3e9b4f;
+	--flags-background-color-warning: #ffd000;
+	--flags-background-color-danger: #e5484d;
+	--flags-background-color-disabled: #e5e4e2;
+
+	--flags-border-color-normal: #0000001f;
+
+	width: 44px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+}
+
+.panel {
+	width: fit-content;
+	height: fit-content;
+	position: absolute;
+	top: 0;
+	left: 100%;
+	z-index: 999;
+	display: flex;
+	flex-direction: row;
+	gap: 2px;
+}
+
+.flags {
+	min-width: 5rem;
+	max-width: 7rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 0.5rem 0.625rem;
+	border-radius: 0.75rem;
+	opacity: 0;
+	transform: translateY(-10px);
+	animation: fadeInUp 0.3s ease forwards;
+	animation-delay: calc(var(--index) * 0.1s);
+	cursor: pointer;
+	font: inherit;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+@keyframes fadeInUp {
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+/* Size */
+.flags[data-size='s'] {
+	height: 2.125rem;
+}
+
+.flags[data-size='m'] {
+	height: 2.5rem;
+}
+
+.flags[data-size='l'] {
+	height: 2.75rem;
+}
+
+/* Variants */
+.flags[data-variant='theme'] {
+	background-color: var(--flags-background-color-theme);
+	color: var(--flags-text-color-theme);
+}
+
+.flags[data-variant='accent'] {
+	background-color: var(--flags-background-color-accent);
+	color: var(--flags-text-color-accent);
+}
+
+.flags[data-variant='simple'] {
+	background-color: var(--flags-background-color-simple);
+	color: var(--flags-text-color-simple);
+}
+
+.flags[data-variant='outline'] {
+	background-color: transparent;
+	box-shadow: inset 0 0 0 1px var(--flags-border-color-normal);
+	color: var(--flags-text-color-outline);
+}
+
+.flags[data-variant='fade'] {
+	background-color: var(--flags-background-color-fade);
+	box-shadow: inset 0 0 0 1px var(--flags-border-color-normal);
+	color: var(--flags-text-color-fade);
+}
+
+.flags[data-variant='ghost'] {
+	background-color: transparent;
+	color: var(--flags-text-color-ghost);
+}
+
+.flags[data-variant='info'] {
+	background-color: var(--flags-background-color-info);
+	color: var(--flags-text-color-info);
+}
+
+.flags[data-variant='success'] {
+	background-color: var(--flags-background-color-success);
+	color: var(--flags-text-color-success);
+}
+
+.flags[data-variant='warning'] {
+	background-color: var(--flags-background-color-warning);
+	color: var(--flags-text-color-warning);
+}
+
+.flags[data-variant='danger'] {
+	background-color: var(--flags-background-color-danger);
+	color: var(--flags-text-color-danger);
+}
+
+/* Border Radius */
+.flags[data-border-radius='xxxs'] {
+	border-radius: var(--flags-radius-xxxs);
+}
+
+.flags[data-border-radius='xxs'] {
+	border-radius: var(--flags-radius-xxs);
+}
+
+.flags[data-border-radius='xs'] {
+	border-radius: var(--flags-radius-xs);
+}
+
+.flags[data-border-radius='s'] {
+	border-radius: var(--flags-radius-s);
+}
+
+.flags[data-border-radius='m'] {
+	border-radius: var(--flags-radius-m);
+}
+
+.flags[data-border-radius='l'] {
+	border-radius: var(--flags-radius-l);
+}
+
+.flags[data-border-radius='xl'] {
+	border-radius: var(--flags-radius-xl);
+}
+
+.flags[data-border-radius='xxl'] {
+	border-radius: var(--flags-radius-xxl);
+}
+
+.flags[data-border-radius='xxxl'] {
+	border-radius: var(--flags-radius-xxxl);
+}
+
+.flags[data-border-radius='full'] {
+	border-radius: var(--flags-radius-full);
+}
+
+/* STATES HOVER */
+.flags[data-variant='accent']:hover,
+.flags[data-variant='theme']:hover {
+	filter: brightness(115%);
+}
+
+.flags[data-variant='simple']:hover {
+	background-color: var(--flags-background-color-theme);
+	color: var(--flags-text-color-theme);
+}
+
+.flags[data-variant='outline']:hover {
+	color: var(--flags-background-color-theme);
+}
+
+.flags[data-variant='fade']:hover {
+	filter: brightness(90%);
+}
+
+.flags[data-variant='ghost']:hover {
+	color: var(--flags-background-color-theme);
+}
+
+.flags[data-variant='info']:hover,
+.flags[data-variant='success']:hover,
+.flags[data-variant='warning']:hover,
+.flags[data-variant='danger']:hover {
+	filter: brightness(113%);
+}
