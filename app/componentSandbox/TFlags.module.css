@@ -34,7 +34,9 @@
 
 	--flags-border-color-normal: #0000001f;
 
-	width: 44px;
+	--flags-gap: 3px;
+
+	width: 2.75rem;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -51,12 +53,16 @@
 	z-index: 999;
 	display: flex;
 	flex-direction: row;
-	gap: 2px;
+	gap: var(--flags-gap);
+}
+
+.panel[data-column='true'] {
+	flex-direction: column;
+	top: calc(100% + var(--flags-gap));
+	left: 0;
 }
 
 .flags {
-	min-width: 5rem;
-	max-width: 7rem;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -84,14 +90,20 @@
 /* Size */
 .flags[data-size='s'] {
 	height: 2.125rem;
+	min-width: 2.125rem;
+	max-width: 7rem;
 }
 
 .flags[data-size='m'] {
 	height: 2.5rem;
+	min-width: 2.5rem;
+	max-width: 7rem;
 }
 
 .flags[data-size='l'] {
 	height: 2.75rem;
+	min-width: 2.75rem;
+	max-width: 7rem;
 }
 
 /* Variants */

@@ -1,0 +1,93 @@
+.avatar {
+	--avatar-radius-s: 12px;
+	--avatar-radius-m: 14px;
+	--avatar-radius-l: 16px;
+
+	--avatar-background-color-standard: black;
+
+	--avatar-gap-standard: 0.5rem;
+
+	--avatar-name-color-standard: black;
+	--avatar-rank-color-standard: gray;
+
+	--avatar-maximum-width-text: 12.5rem;
+
+	width: fit-content;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	gap: var(--avatar-gap-standard);
+}
+
+.avatar[data-side='left'] {
+	flex-direction: row-reverse;
+}
+.avatar[data-side='right'] {
+	flex-direction: row;
+}
+
+.avatar[data-border-radius='s'] {
+	border-radius: var(--avatar-radius-s);
+}
+.avatar[data-border-radius='m'] {
+	border-radius: var(--avatar-radius-m);
+}
+.avatar[data-border-radius='l'] {
+	border-radius: var(--avatar-radius-l);
+}
+
+.avatarLoaded {
+	width: 2.75rem;
+	height: 2.75rem;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	background-color: var(--avatar-background-color-standard);
+}
+
+.avatarLoaded[data-border-radius='s'] {
+	border-radius: calc(var(--avatar-radius-s) + 0.125rem);
+}
+.avatarLoaded[data-border-radius='m'] {
+	border-radius: calc(var(--avatar-radius-m) + 0.125rem);
+}
+.avatarLoaded[data-border-radius='l'] {
+	border-radius: calc(var(--avatar-radius-l) + 0.125rem);
+}
+
+.nameContainer {
+	height: 2.75rem;
+	max-width: var(--avatar-maximum-width-text, 12.5rem);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 0.13rem;
+}
+
+.name,
+.rank {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	width: 100%;
+}
+
+.name {
+	font-size: 1rem;
+	color: var(--avatar-name-color-standard);
+	font-weight: bold;
+}
+.rank {
+	font-size: 0.8rem;
+	color: var(--avatar-rank-color-standard);
+	text-transform: capitalize;
+}
+
+.rank[data-italic='true'] {
+	font-style: italic;
+}

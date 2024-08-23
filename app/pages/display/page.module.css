@@ -1,0 +1,32 @@
+.container {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+.pageTitle {
+	font-size: 24px;
+	margin-bottom: 20px;
+}
+
+.section {
+	margin-bottom: 30px;
+}
+
+.section h2 {
+	font-size: 20px;
+	margin-bottom: 10px;
+}
+
+.displayGroup {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.displayLabel {
+	background-color: rgb(51, 255, 0);
+}
+.displayRoot {
+	background-color: rgb(255, 0, 255);
+}

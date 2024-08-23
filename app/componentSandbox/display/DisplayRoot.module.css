@@ -1,0 +1,7 @@
+.displayRoot {
+	height: fit-content;
+	width: fit-content;
+
+	display: flex;
+	flex-direction: column;
+}

@@ -22,14 +22,7 @@ const dataSelect = [
 	'lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
 ];
 
-const languages = [
-	'Français',
-	'English',
-	'Italian',
-	'Español',
-	'japan',
-	'korean',
-];
+const languages = ['Fr', 'En', 'It', 'Es', 'ja', 'ko'];
 
 const SelectTestPage = () => {
 	const handleMultiSelect = (value: any) => {
@@ -92,18 +85,33 @@ const SelectTestPage = () => {
 
 			<section className={styles.section}>
 				<h2>Button languages</h2>
-				<div className={styles.selectDemo}>
-					<Flex direction='row'>
-						<TFlags
-							onClick={handleBasicSelect}
-							languages={languages}
-							size='m'
-							variant='fade'
-							borderRadius='m'
-						/>
-						Dessous
-					</Flex>
-				</div>
+				<Flex direction='row'>
+					<div className={styles.selectDemo}>
+						<Flex direction='row'>
+							<TFlags
+								onClick={handleBasicSelect}
+								languages={languages}
+								size='m'
+								variant='fade'
+								borderRadius='m'
+							/>
+							ROW
+						</Flex>
+					</div>
+					<div className={styles.selectDemo}>
+						<Flex direction='row'>
+							<TFlags
+								onClick={handleBasicSelect}
+								languages={languages}
+								column
+								size='l'
+								variant='fade'
+								borderRadius='m'
+							/>
+							COLUMN
+						</Flex>
+					</div>
+				</Flex>
 			</section>
 
 			<section className={styles.section}>

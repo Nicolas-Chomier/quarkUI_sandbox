@@ -53,6 +53,15 @@ export default function Home() {
 					<Link href='/pages/alert' className={styles.link}>
 						Alert
 					</Link>
+					<Link href='/pages/avatar' className={styles.link}>
+						Avatar
+					</Link>
+					<Link href='/pages/avatar2' className={styles.link}>
+						Avatar for quark lib
+					</Link>
+					<Link href='/pages/display' className={styles.link}>
+						Display
+					</Link>
 				</div>
 			</div>
 		</div>

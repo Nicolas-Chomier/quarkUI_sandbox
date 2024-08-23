@@ -1,0 +1,24 @@
+/* Width */
+.label[data-width='s'] {
+	width: 8rem;
+	max-width: 8rem;
+	min-height: 2.75rem;
+	max-height: 2.75rem;
+	padding: 4px 6px;
+}
+
+.label[data-width='m'] {
+	width: 12rem;
+	max-width: 12rem;
+	min-height: 2.75rem;
+	max-height: 2.75rem;
+	padding: 4px 8px;
+}
+
+.label[data-width='l'] {
+	width: 15.5rem;
+	max-width: 15.5rem;
+	min-height: 2.75rem;
+	max-height: 2.75rem;
+	padding: 4px 10px;
+}

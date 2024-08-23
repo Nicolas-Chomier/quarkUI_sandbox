@@ -1,0 +1,48 @@
+/* TAvatar2.module.css */
+.avatar {
+	--avatar-gap: 0.4rem;
+	--avatar-name-color: black;
+	--avatar-rank-color: gray;
+	--avatar-max-width: 12.5rem;
+
+	display: flex;
+	align-items: center;
+	gap: var(--avatar-gap);
+	width: fit-content;
+	height: fit-content;
+}
+
+.avatar[data-side='left'] {
+	flex-direction: row-reverse;
+}
+
+.nameContainer {
+	max-width: var(--avatar-max-width);
+	display: flex;
+	flex-direction: column;
+	gap: 0.13rem;
+}
+
+.name,
+.rank {
+	width: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.name {
+	font-size: 1rem;
+	color: var(--avatar-name-color);
+	font-weight: bold;
+}
+
+.rank {
+	font-size: 0.8rem;
+	color: var(--avatar-rank-color);
+	text-transform: capitalize;
+}
+
+.rank[data-italic='true'] {
+	font-style: italic;
+}

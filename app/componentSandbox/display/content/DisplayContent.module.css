@@ -1,0 +1,14 @@
+.displayContent {
+	display: flex;
+	align-items: center;
+	min-height: 2.75rem;
+	max-height: 2.75rem;
+}
+
+/* Direction */
+.displayContent[data-direction='row'] {
+	flex-direction: row;
+}
+.displayContent[data-direction='row-reverse'] {
+	flex-direction: row-reverse;
+}
