@@ -1,7 +1,8 @@
-import React, { createContext, ReactNode, useContext, useMemo } from 'react';
+import React, { createContext, ReactNode, useContext } from 'react';
 import { DisplayIcon } from './icon/DisplayIcon';
 import { DisplayText } from './text/DisplayText';
 import { DisplayUnit } from './unit/DisplayUnit';
+import { useDisplayRootContext } from '../DisplayRoot';
 import styles from './DisplayContent.module.css';
 
 type DisplayContentProps = {
@@ -23,18 +24,26 @@ const DisplayContentContext = createContext<DisplayContentProps | undefined>(
 // Composant principal
 export const DisplayContent: DisplayContentComponent = ({
 	children,
-	className = '',
+	direction = 'row',
+	className,
 }) => {
-	const contextValue = useMemo(
-		() => ({ children, className }),
-		[children, className],
-	);
+	const { style, disable, width, borderRadius } = useDisplayRootContext();
+
+	// Pas de contexte pour le moment
+	const contextValue = undefined;
 
 	if (!children) return null;
 
 	return (
 		<DisplayContentContext.Provider value={contextValue}>
-			<div className={`${styles.displayContent} ${className}`}>
+			<div
+				className={`${className ?? styles.content}`}
+				data-direction={direction}
+				data-border-radius={borderRadius}
+				data-disabled={disable}
+				data-style={style}
+				data-width={width}
+			>
 				{children}
 			</div>
 		</DisplayContentContext.Provider>

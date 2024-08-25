@@ -1,34 +1,27 @@
 import React, { ReactNode } from 'react';
 import { useDisplayRootContext } from '../../DisplayRoot';
-import styles from './DisplayText.module.css';
+import styles from './DisplayStat.module.css';
 
-type DisplayTextProps = {
+type DisplayStatProps = {
 	children: ReactNode;
 	className?: string;
-	fontSize?: 'xs' | 's' | 'm' | 'l' | 'xl';
-	align?: 'left' | 'center' | 'right';
-	justify?: 'left' | 'right';
+	fontSize?: 'xxs' | 'xs' | 's' | 'm' | 'l' | 'xl' | 'xxl';
 };
 
-export const DisplayText: React.FC<DisplayTextProps> = ({
+export const DisplayStat: React.FC<DisplayStatProps> = ({
 	children,
 	className,
 	fontSize = 'm',
-	justify,
-	align,
 }) => {
-	// const { xxx } = useDisplayContentContext();
 	const { style, disable } = useDisplayRootContext();
 
 	if (!children) return null;
 	return (
 		<div
-			className={`${className ?? styles.text}`}
+			className={`${className ?? styles.stat}`}
 			data-disabled={disable}
 			data-style={style}
 			data-font-size={fontSize}
-			data-justify={justify}
-			data-align={align}
 		>
 			{children}
 		</div>

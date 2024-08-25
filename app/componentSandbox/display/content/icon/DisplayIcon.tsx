@@ -1,4 +1,5 @@
 import React, { useMemo } from 'react';
+import { useDisplayRootContext } from '../../DisplayRoot';
 import styles from './DisplayIcon.module.css';
 
 type DisplayIconProps = {
@@ -9,11 +10,13 @@ type DisplayIconProps = {
 };
 
 export const DisplayIcon: React.FC<DisplayIconProps> = ({
-	className = '',
+	className,
 	children,
 	icon,
 	size = 28,
 }) => {
+	const { disable } = useDisplayRootContext();
+
 	const renderIcon = useMemo(() => {
 		switch (icon) {
 			case 'info':
@@ -79,5 +82,9 @@ export const DisplayIcon: React.FC<DisplayIconProps> = ({
 		}
 	}, [children, icon, size]);
 
-	return <div className={`${className} ${styles.icon}`}>{renderIcon}</div>;
+	return (
+		<div className={`${className ?? styles.icon}`} data-disabled={disable}>
+			{renderIcon}
+		</div>
+	);
 };

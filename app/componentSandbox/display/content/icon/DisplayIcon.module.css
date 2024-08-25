@@ -1,7 +1,16 @@
 .icon {
+	--displayIcon-disabled-opacity: 0.5;
+
+	min-width: fit-content;
 	max-height: 2.75rem;
-	width: 2.75rem;
+	max-width: 2.75rem;
 	display: flex;
+	flex-direction: row;
 	align-items: center;
 	justify-content: center;
+}
+
+/* Disable */
+.icon[data-disabled='true'] {
+	opacity: var(--displayIcon-disabled-opacity);
 }

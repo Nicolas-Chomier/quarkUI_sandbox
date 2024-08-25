@@ -1,0 +1,201 @@
+.list {
+	--displayList-radius-xxxs: 4px;
+	--displayList-radius-xxs: 6px;
+	--displayList-radius-xs: 8px;
+	--displayList-radius-s: 10px;
+	--displayList-radius-m: 12px;
+	--displayList-radius-l: 14px;
+	--displayList-radius-xl: 16px;
+	--displayList-radius-xxl: 18px;
+	--displayList-radius-xxxl: 20px;
+	--displayList-radius-full: 9999px;
+
+	--displayList-background-color-infos: rgb(116, 116, 224);
+	--displayList-background-color-success: rgb(116, 224, 116);
+	--displayList-background-color-warning: rgb(241, 241, 121);
+	--displayList-background-color-danger: rgb(224, 116, 116);
+	--displayList-background-color-fade: rgb(238, 238, 238);
+	--displayList-background-color-standard: rgb(240, 240, 240);
+
+	--displayList-text-color-infos: rgb(43, 43, 211);
+	--displayList-text-color-success: rgb(43, 135, 211);
+	--displayList-text-color-warning: rgb(147, 150, 0);
+	--displayList-text-color-danger: rgb(211, 43, 43);
+	--displayList-text-color-outline: black;
+	--displayList-text-color-fade: rgb(14, 14, 14);
+	--displayList-text-color-ghost: rgb(20, 20, 20);
+
+	--displayList-border-color-normal: rgb(224, 224, 224);
+
+	min-height: 2.75rem;
+	height: fit-content;
+	max-height: fit-content;
+	min-width: fit-content;
+
+	display: flex;
+	align-items: flex-start;
+
+	gap: 0.4rem;
+
+	padding: 0.6rem 0.6rem;
+	box-sizing: border-box;
+	background-color: var(--displayList-background-color-standard);
+}
+
+/* Direction */
+.list[data-direction='column'] {
+	flex-direction: column;
+}
+.list[data-direction='column-reverse'] {
+	flex-direction: column-reverse;
+}
+
+/* Width */
+.list[data-width='s'] {
+	width: 8rem;
+	max-width: 8rem;
+}
+.list[data-width='m'] {
+	width: 12rem;
+	max-width: 12rem;
+}
+.list[data-width='l'] {
+	width: 15.5rem;
+	max-width: 15.5rem;
+}
+.list[data-width='xl'] {
+	width: 19rem;
+	max-width: 19rem;
+}
+.list[data-width='25'] {
+	width: 25%;
+	padding: 0.6rem;
+}
+.list[data-width='50'] {
+	width: 50%;
+	padding: 0.6rem;
+}
+.list[data-width='75'] {
+	width: 75%;
+	padding: 0.6rem;
+}
+.list[data-width='100'] {
+	width: 100%;
+	padding: 0.6rem;
+}
+
+/* Style */
+.list[data-style='infos'] {
+	background-color: var(--displayList-background-color-infos);
+	color: var(--displayList-text-color-infos);
+}
+.list[data-style='success'] {
+	background-color: var(--displayList-background-color-success);
+	color: var(--displayList-text-color-success);
+}
+.list[data-style='warning'] {
+	background-color: var(--displayList-background-color-warning);
+	color: var(--displayList-text-color-warning);
+}
+.list[data-style='danger'] {
+	background-color: var(--displayList-background-color-danger);
+	color: var(--displayList-text-color-danger);
+}
+.list[data-style='outline'] {
+	background-color: transparent;
+	box-shadow: inset 0 0 0 1px var(--displayList-border-color-normal);
+	color: var(--displayList-text-color-outline);
+}
+.list[data-style='fade'] {
+	background-color: var(--displayList-background-color-fade);
+	box-shadow: inset 0 0 0 1px var(--displayList-border-color-normal);
+	color: var(--displayList-text-color-fade);
+}
+.list[data-style='ghost'] {
+	background-color: transparent;
+	color: var(--displayList-text-color-ghost);
+}
+
+/* Border Radius */
+.list[data-border-radius='xxxs'] {
+	border-radius: var(--displayList-radius-xxxs);
+}
+.list[data-border-radius='xxs'] {
+	border-radius: var(--displayList-radius-xxs);
+}
+.list[data-border-radius='xs'] {
+	border-radius: var(--displayList-radius-xs);
+}
+.list[data-border-radius='s'] {
+	border-radius: var(--displayList-radius-s);
+}
+.list[data-border-radius='m'] {
+	border-radius: var(--displayList-radius-m);
+}
+.list[data-border-radius='l'] {
+	border-radius: var(--displayList-radius-l);
+}
+.list[data-border-radius='xl'] {
+	border-radius: var(--displayList-radius-xl);
+}
+.list[data-border-radius='xxl'] {
+	border-radius: var(--displayList-radius-xxl);
+}
+.list[data-border-radius='xxxl'] {
+	border-radius: var(--displayList-radius-xxxl);
+}
+.list[data-border-radius='full'] {
+	border-radius: var(--displayList-radius-full);
+}
+
+.items {
+	width: 100%;
+	background-color: rgb(0, 255, 149);
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 0.6rem;
+}
+
+.key,
+.value {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+/* Width */
+.list[data-width='s'] .key {
+	min-width: 8rem;
+	max-width: 8rem;
+}
+.list[data-width='m'] .key {
+	min-width: 8rem;
+	max-width: 8rem;
+}
+.list[data-width='l'] .key {
+	min-width: 8rem;
+	max-width: 8rem;
+}
+.list[data-width='xl'] .key {
+	min-width: 8rem;
+	max-width: 8rem;
+}
+.list[data-width='25'] .key {
+	min-width: 8rem;
+	max-width: 8rem;
+}
+.list[data-width='50'] .key {
+	min-width: 8rem;
+	max-width: 8rem;
+}
+.list[data-width='75'] .key {
+	min-width: 8rem;
+	max-width: 8rem;
+}
+.list[data-width='100'] .key {
+	background-color: red;
+	min-width: 2rem;
+	max-width: 50%;
+}
